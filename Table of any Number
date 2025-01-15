@@ -1,0 +1,27 @@
+#include <iostream>
+#include<conio.h>
+class Table 
+{
+    public:
+        int num;
+        void get() 
+		{
+            std::cout << "Enter the number: ";
+            std::cin >> num;
+        }
+        void disp() 
+		{
+            std::cout << "Table of " << num << ":\n";
+            for (int i = 1; i <= 10; i++) 
+			{
+                std::cout <<  num * i << std::endl;
+            }
+        }
+};
+
+int main() {
+    Table s;
+    s.get();
+    s.disp();
+    return 0;
+}
