@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+
+class circle
+{
+    public:
+        int rad;
+        float circum, area;
+        
+        circle() // Default Constructor
+        {
+            cout << "Enter the value of Radius of Circle: ";
+            cin >> rad;
+            
+            area = 3.142 * rad * rad;  
+            cout << "Area: " << area << endl;
+            
+            circum = 2 * 3.142 * rad; 
+            cout << "Circumference: " << circum << endl;
+        }
+};
+
+int main()
+{
+    circle c1;
+  
+    return 0;
+}
