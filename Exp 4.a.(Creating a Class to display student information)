@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Student
+{
+    private:
+        int roll;
+        string name;
+        int marks;
+	public:
+      	Student(int r, string nm, int m) 
+        {
+            roll = r;
+            name = nm;
+            marks = m;
+        }
+        int getRoll() 
+        {
+            return roll;
+        }
+		string getName() 
+        {
+            return name;
+        }
+		int getMarks() 
+        {
+            return marks;
+        }
+        void displayStudentInfo() 
+        {
+            cout << "Roll Number: " << roll << endl;
+            cout << "Name: " << name << endl;
+            cout << "Marks: " << marks << endl;
+        }
+};
+
+int main()
+{
+    
+    Student student1(1, "Aditya", 95);
+    
+   
+    student1.displayStudentInfo();
+
+    return 0;
+}
