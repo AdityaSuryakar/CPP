@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class rectangle 
+{
+	private:
+    	int len;
+    	int wid;
+    	int area;
+	public:
+   		rectangle(int l, int w) 
+		{
+       		len = l;
+       		wid = w;
+       		area = len * wid;
+   		}		    
+		void display() 
+		{
+      		cout << "Length: " << len <<endl<< "Width: " << wid <<endl<< "Area: " << area << endl;
+   		}
+};
+
+int main() 
+{
+    rectangle r(5, 10); 
+    r.display();        
+    return 0;
+}
