@@ -1,0 +1,33 @@
+//Overload the << and >> operators for input/output in a custom Date class.
+#include<iostream> 
+using namespace std;
+
+class Date {
+    int date, month, year;
+
+public:
+    Date() : date(1), month(1), year(2000) {}  // Default Constructor
+
+    friend void operator>>(istream &in, Date &d);  // Overloading input operator
+    friend void operator<<(ostream &out, const Date &d);  // Overloading output operator
+};
+
+void operator>>(istream &in, Date &d) {
+    in >> d.date;
+    in >> d.month;
+    in >> d.year;
+}
+
+void operator<<(ostream &out, const Date &d) {
+    out << "Entered date is: ";
+    out << d.date << "/" << d.month << "/" << d.year;
+}
+
+int main() {
+    Date d1;
+    cout << "Enter date (day month year): ";
+    cin >> d1;  // Input using overloaded >> operator
+    cout << d1;  // Output using overloaded << operator
+    
+    return 0;
+}
